@@ -13,4 +13,4 @@ jobs:
           command: make install
       - run:
           name: Lint
-          command: make line
+          command: make lint
