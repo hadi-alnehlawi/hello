@@ -14,8 +14,8 @@ jobs:
       - image: cimg/python:3.8
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
+    #   - python/install-packages:
+    #       pkg-manager: pip
       - run:
           name: Setup
           command: make setup
