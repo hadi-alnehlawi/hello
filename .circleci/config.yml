@@ -1,20 +1,16 @@
 version: 2.1
 
-workflows:
-    jobs:
-      - build-and-test
 
 jobs:
-  build-and-test:
+  build:
+    working_directory: ~/circleci-demo-python-aws
     docker:
       - image: cimg/python:3.8
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
-    #   - run:
-    #       name: Install
-    #       command: make install
+      - run:
+          name: Install
+          command: make install
     #   - run:
     #       name: Lint
     #       command: make line
